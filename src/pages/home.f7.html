@@ -1,0 +1,78 @@
+<template>
+    <div class="page" data-name="home">
+
+        
+        <div class="navbar">
+            <div class="navbar-bg"></div>
+            <div class="navbar-inner">
+                <div class="title sliding">Scener</div>
+                <div class="right">
+                    <a href="/settings" class="link">
+                        <i class="icon f7-icons if-not-md">gear</i>
+                    </a>
+                </div>
+                <div class="title-large">
+                    <div class="title-large-text">Scener</div>
+                </div>
+            </div>
+        </div>        
+
+        <div class="page-content">
+
+            <div class="list block">
+                {{#each channels}}
+                <a href="/channel/{{id}}" class="thumbnail16x9">
+                    <div class="chip bg-color-white">
+                        <div class="chip-media text-color-pink">
+                            <i class="icon f7-icons">arrowtriangle_right_circle_fill</i>
+                        </div>
+                        <div class="chip-label text-color-red">LIVE</div>
+                    </div>
+                    <div class="chip" style="background-color:#ccc">
+                        <div class="chip-media text-color-pink">
+                            <i class="icon f7-icons">eye</i>
+                        </div>
+                        <div class="chip-label text-color-black">1,234</div>
+                    </div>
+                </a>
+                {{/each}}
+            </div>
+
+            <div data-pagination='{"el": ".swiper-pagination"}' data-space-between="10" data-slides-per-view="3.5" style="padding-left:16px;" class="swiper-container swiper-init demo-swiper">
+                <div class="swiper-pagination"></div>
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">Slide 1</div>
+                  <div class="swiper-slide">Slide 2</div>
+                  <div class="swiper-slide">Slide 3</div>
+                  <div class="swiper-slide">Slide 4</div>
+                  <div class="swiper-slide">Slide 5</div>
+                  <div class="swiper-slide">Slide 6</div>
+                  <div class="swiper-slide">Slide 7</div>
+                  <div class="swiper-slide">Slide 8</div>
+                  <div class="swiper-slide">Slide 9</div>
+                  <div class="swiper-slide">Slide 10</div>
+                </div>
+              </div>
+
+        </div>
+
+    </div>
+</template>
+<script>
+    export default {
+        data: function () {
+            return {
+                shows:[],
+            }
+        },
+
+        on: {           
+
+            pageInit: function(e, page) {                
+                page.app.data.api('/channels').then((r) => {
+                    this.$setState({channels:r});
+                });
+            }
+        }
+    }
+</script>

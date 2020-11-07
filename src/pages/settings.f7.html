@@ -1,0 +1,32 @@
+<template>
+    <div class="page" data-name="about">
+        <div class="navbar">
+            <div class="navbar-bg"></div>
+            <div class="navbar-inner sliding">
+                <div class="left">
+                    <a href="#" class="link back">
+                        <i class="icon icon-back"></i>
+                    </a>
+                </div>
+                <div class="title">Settings</div>
+            </div>
+        </div>
+        <div class="page-content">
+            <div class="block-title">Test Settings</div>
+            <div class="block block-strong">
+
+                <button @click="allowNotifications" class="button button-round button-fill">Allow Notification Permissions</button>
+
+            </div>
+        </div>
+    </div>
+</template>
+<script>
+    export default {
+        methods: {            
+            allowNotifications: function() {
+                this.$app.notifications.init();
+            }
+        }
+    };
+</script>

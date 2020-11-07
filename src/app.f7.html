@@ -1,0 +1,50 @@
+<template>
+    <div id="app">
+
+        <div class="views tabs safe-areas">
+
+            <div id="toolbar-main" class="toolbar toolbar-bottom tabbar tabbar-labels no-hairline searchbar-hide-on-enable">
+                <div class="toolbar-inner">
+                    <a href="#view-home" class="tab-link tab-link-active">
+                        <i class="icon f7-icons if-not-md">tv_fill</i>
+                        <span class="tabbar-label">Watch</span>
+                    </a>
+                    <a href="#view-following" class="tab-link">
+                        <i class="icon f7-icons if-not-md">person_2_fill</i>
+                        <span class="tabbar-label">Following</span>
+                    </a>
+                    <a href="#view-messages" class="tab-link">
+                        <i class="icon f7-icons if-not-md">bubble_left_fill</i>
+                        <span class="tabbar-label">Messages</span>
+                    </a>
+                </div>
+            </div>
+
+            <div id="view-home" class="view view-main view-init tab tab-active" data-url="/"></div>
+            <div id="view-following" class="view view-init tab" data-name="people" data-url="/following"></div>
+            <div id="view-messages" class="view view-init tab" data-name="chats" data-url="/messages"></div>
+
+        </div>
+
+    </div>
+
+    <div class="popup popup-small popup-connection">
+        <div class="view">
+            <div class="page">
+                <div class="page-content">
+                    <div class="block-title block-title-medium text-align-center">Check Your Connection</div>
+                    <div class="block text-align-center">
+                        <p>There was an issue connecting to Scener.</p>
+                        <p>Please check your internet.</p>
+                        <br/>
+                        <button class="button button-round button-fill button-half" onclick="connectionTryAgain()">Try Again</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</template>
+<script>
+    export default { }
+</script>

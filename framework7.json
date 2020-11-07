@@ -1,0 +1,39 @@
+{
+  "cwd": "/Users/dstrickland/Development/scener-mobile-lite",
+  "type": [
+    "cordova"
+  ],
+  "name": "Scener",
+  "framework": "core",
+  "template": "tabs",
+  "bundler": "webpack",
+  "cssPreProcessor": false,
+  "theming": {
+    "customColor": false,
+    "color": "#007aff",
+    "darkTheme": true,
+    "iconFonts": true,
+    "fillBars": false
+  },
+  "customBuild": false,
+  "webpack": {
+    "developmentSourceMap": true,
+    "productionSourceMap": true,
+    "hashAssets": false,
+    "preserveAssetsPaths": false,
+    "inlineAssets": true
+  },
+  "pkg": "com.scener.app",
+  "cordova": {
+    "folder": "cordova",
+    "platforms": [
+      "ios"
+    ],
+    "plugins": [
+      "cordova-plugin-statusbar",
+      "cordova-plugin-keyboard",
+      "cordova-plugin-splashscreen",
+      "cordova-plugin-safariviewcontroller"
+    ]
+  }
+}

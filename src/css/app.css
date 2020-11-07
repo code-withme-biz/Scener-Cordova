@@ -1,0 +1,86 @@
+/* iOS Cordova Tweak */
+.device-cordova.device-ios {
+  height: 100vh;
+}
+
+/* styles */
+
+.thumbnail16x9 {
+    display:block;
+    border-radius:12px;
+    padding-top:6px;
+    padding-left:6px;
+    margin-bottom:24px;
+    background:#ddd;
+    /*height: calc((100vw - (var(--f7-block-padding-horizontal) + var(--f7-safe-area-left) + var(--f7-block-padding-horizontal) + var(--f7-safe-area-right))*0.5625));*/
+    height: calc((100vw - 16px - 16px)*0.5625);
+
+}
+.thumbnail16x9 .chip {
+    margin-top:0;
+    margin-right:6px;
+}
+
+.demo-swiper .swiper-slide {
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    background: #fff;
+    height:120px;
+}
+.demo-swiper .swiper-slide {
+    font-size: 25px;
+    font-weight: 300;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    color: #000;
+}
+
+.route-channel .views, .pip .views {
+    padding-top:200px;
+}
+
+
+/*
+*, html {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none; 
+}
+
+input {
+    -webkit-touch-callout: initial;
+    -webkit-user-select: initial; 
+}
+
+:root {
+    --f7-page-bg-color:linear-gradient(to bottom ,#09061f 0%,#1f0150 100%);
+    --f7-page-bg-color:linear-gradient(to bottom, rgba(93, 37, 105, 1) 0%, rgba(29, 20, 70, 1) 100%);
+
+}
+*/
+
+
+/*
+:root {
+  --f7-page-bg-color:white;
+  --f7-block-title-large-font-size:42px;
+  --f7-toolbar-height:90px;
+  --f7-tabbar-link-active-color:purple;
+  --f7-theme-color:purple;
+}
+:root {
+    --f7-page-bg-color:linear-gradient(to bottom, rgba(93, 37, 105, 1) 0%, rgba(29, 20, 70, 1) 100%);
+    --f7-navbar-shadow-image: transparent;
+    --f7-tabbar-link-active-color:rgba(255,255,255,1);
+    --f7-list-inset-border-radius:9px;
+    --f7-navbar-link-color:white;
+    --f7-searchbar-link-color:white;
+    --f7-theme-color2:#9013FE;
+    --f7-theme-color:rgba(255,255,255,0.7);
+    --f7-button-fill-bg-color:#9013FE;
+    --f7-block-inset-side-margin:32px;
+    --f7-list-bg-color:rgba(255,255,255,0.1);
+}
+
+*/

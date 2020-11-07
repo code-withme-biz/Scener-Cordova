@@ -1,0 +1,30 @@
+<template>
+    <div class="page" data-name="about">
+        <div class="navbar">
+            <div class="navbar-bg"></div>
+            <div class="navbar-inner sliding">
+                <div class="left">
+                    <a href="#" class="link back">
+                        <i class="icon icon-back"></i>
+                    </a>
+                </div>
+                <div class="title">Messages</div>
+            </div>
+        </div>
+        <div class="page-content">
+            <div class="block-title">Safari Web View Test</div>
+            <div class="block block-strong">
+                <p>This is a test of the Safari Webview Plugin and the URL scheme plugin.</p>
+                <p>The button below will open a URL in the Safari Webview browser. The form on that page will pass the data parameter to the app URL scheme:<br/>
+                    <i>scenerapp://?data=foobar</i>
+                </p>
+                <p>
+                    When the URL scheme is called, the Safari Webview should close and the data in the url read.
+                </p>                
+            </div>
+        </div>
+    </div>
+</template>
+<script>
+    export default {};
+</script>
